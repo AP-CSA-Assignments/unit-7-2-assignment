@@ -1,4 +1,4 @@
-# unit-7-1-assignment
+# unit-7-2-assignment
 
 ## Git Config
 ```
@@ -15,32 +15,44 @@ The star means to compile every file that is a Java file type.
 
 Run your code by running
 ```
-java Main.java
+java Main
 ```
 
 After you compile the shape classes, you only need to compile and run `Main.java` as usual.
 
 # Instructions  
 
-Write a Java program that allows a user to input multiple words.  Your program should stop accepting words when the user enters "STOP".  Store the words in an `ArrayList`.  The word STOP should not be stored in the list.
+## Problem 1
+Write a Java program that allows a user to input multiple words. Your program should stop accepting words when the user enters "STOP". Store the words in an `ArrayList`. The word STOP should not be stored in the list.
 
-Next, print the size of the list, followed by the list itself.
-
-Then, replace the last index with the first one and remove the value from the first index, but only if the list has a length greater than two.  Finally, reprint the list.
+Next, print the `ArrayList`, then print all the strings from this list in the reverse order to which they appear in the list, with each one on a new line, while adding the strings from the array in sequential order starting from the beginning.
 
 Sample Run:
 ```
 Please enter words, enter STOP to stop the loop.
-phone
-computer
-laptop
-television
-newspaper
+winter
+fall
+spring
+summer
 STOP
 
-5
-[phone, computer, laptop, television, newspaper]
-[computer, laptop, television, phone]
+[winter,fall,spring,summer]
+summerwinter
+springfall
+fallspring
+wintersummer     
 ```
 
-Hint: use a while loop to take the user input - remember that this type of loop runs until the condition you specify is no longer met so you can base this off the user input.
+Hint: printing the entire ArrayList needs only one statement, however to print each String from the list individually on a new line starting from the last value, you will need to write a loop which starts at the end of the list and works backwards through it.
+
+## Problem 2
+Write a public static method named `highestNum` which takes an ArrayList of `Integer` objects, and returns the highest value in this list. Make sure to take into account negative numbers.
+
+Note: when you write your method header, and specify the type of the parameter as an ArrayList, make sure you include the data type your ArrayList will contain in angle brackets (<>).
+
+Hint: If you assume perfect data, then set the minimum to the first element of your `ArrayList`.  If you'd like to be super defensive about your programming, then set the minimum to `Integer.MIN_VALUE`.
+
+## Problem 3
+Write the `getEvens` method so it takes in a single `ArrayList` as parameter, and returns a new `ArrayList` of `Integers` containing all even `Integers` from the input `ArrayList` in the order they originally appeared. The contents of the input should not change.
+
+For example, if an `ArrayList` containing the `Integers` 1,2,4,5,7 in that order is passed as a parameter to `getEvens`, it should return an `ArrayList` containing the `Integers` 2,4 in that order.
